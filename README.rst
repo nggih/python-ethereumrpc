@@ -1,5 +1,5 @@
 =================
-python-bitcoinrpc
+python-ethereumrpc
 =================
 
 AuthServiceProxy is an improved version of python-jsonrpc.
@@ -26,17 +26,17 @@ Installation
 2. run setup.py
 
 Note: This will only install bitcoinrpc. If you also want to install jsonrpc to preserve 
-backwards compatibility, you have to replace 'bitcoinrpc' with 'jsonrpc' in setup.py and run it again.
+backwards compatibility, you have to replace 'ethereumrpc' with 'jsonrpc' in setup.py and run it again.
 
 Or simply install the library using pip::
 
-    pip install python-bitcoinrpc
+    pip install python-ethereumrpc
 
 Example
 =======
 .. code:: python
 
-    from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
+    from ethereumrpc.authproxy import AuthServiceProxy, JSONRPCException
 
     # rpc_user and rpc_password are set in the bitcoin.conf file
     rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:8332"%(rpc_user, rpc_password))
@@ -54,7 +54,7 @@ Logging all RPC calls to stderr
 ===============================
 .. code:: python
 
-    from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
+    from ethereumrpc.authproxy import AuthServiceProxy, JSONRPCException
     import logging
 
     logging.basicConfig()
